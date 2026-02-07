@@ -2,7 +2,7 @@
 
 > 이 문서는 [통합 아키텍처](./README.md)를 기반으로 코드를 생성·확장할 때 따라야 하는 구체적인 절차와 규칙을 정의한다.
 >
-> **Claude Code 플러그인 사용자:** 이 문서의 내용은 [`skills/langgraph-architect/`](./skills/langgraph-architect/)에 기계 판독 가능한 형태로 패키징되어 있다. 플러그인 설치 후에는 스킬이 자동으로 참조되므로 이 문서를 직접 읽을 필요가 없다.
+> **Claude Code 플러그인 사용자:** 이 문서의 내용은 [`skills/layered-agent-architect/`](./skills/layered-agent-architect/)에 기계 판독 가능한 형태로 패키징되어 있다. 플러그인 설치 후에는 스킬이 자동으로 참조되므로 이 문서를 직접 읽을 필요가 없다.
 
 ---
 
@@ -66,7 +66,7 @@ main.py → interfaces/ → graphs/ → nodes/ → prompts/, tools/, core/
 
 - **1 폴더 = 1 레이어**: `layers/` 같은 래퍼 디렉토리 생성 금지
 - **1 파일 = 1 역할**: 하나의 파일에 여러 관심사를 섞지 않는다
-- **네스팅 깊이 최대 1**: `agent_system/<layer>/<file>.py` 이상 깊어지지 않는다
+- **네스팅 깊이 최대 1**: `src/<layer>/<file>.py` 이상 깊어지지 않는다
 - **`__init__.py`는 내보내기 전용**: 로직을 넣지 않는다 (tools/의 레지스트리 제외)
 
 ---
@@ -93,12 +93,12 @@ Phase에 따라 필요한 디렉토리만 생성한다.
 
 ```bash
 # Phase 1 (최소 시작)
-mkdir -p agent_system/{core,prompts,tools,nodes,graphs}
+mkdir -p src/{core,prompts,tools,nodes,graphs}
 
 # Phase 2 (기능 확장) — Phase 1 + 동일 디렉토리에 파일 추가
 
 # Phase 3 (프로덕션) — 추가 디렉토리
-mkdir -p agent_system/{memory,interfaces,config}
+mkdir -p src/{memory,interfaces,config}
 ```
 
 **Step 3 — 필수 파일 생성**
@@ -106,7 +106,7 @@ mkdir -p agent_system/{memory,interfaces,config}
 Phase 1 필수 파일 목록:
 
 ```
-agent_system/
+src/
 ├── core/
 │   ├── __init__.py
 │   ├── state.py           # AgentState 정의 + Reducer

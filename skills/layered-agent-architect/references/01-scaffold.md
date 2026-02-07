@@ -12,7 +12,7 @@
 7개 레이어, ~18개 파일이 한번에 생성된다.
 
 ```bash
-cp -r <이_스킬_경로>/scaffolding/ <프로젝트_루트>/agent_system/
+cp -r <이_스킬_경로>/scaffolding/ <프로젝트_루트>/src/
 ```
 
 ### Step 2 — 프로젝트 맞춤 수정
@@ -41,7 +41,7 @@ cp -r <이_스킬_경로>/scaffolding/ <프로젝트_루트>/agent_system/
 ## 생성되는 구조
 
 ```
-agent_system/
+src/
 ├── core/           # State, Schema, Model Factory
 │   ├── state.py
 │   ├── schemas.py

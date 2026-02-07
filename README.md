@@ -15,7 +15,7 @@
 ## 아키텍처 한눈에 보기
 
 ```
-agent_system/
+src/
 ├── core/           # 기반 레이어 — State, Schema, Model Factory
 │   ├── state.py         # State 정의 + Reducer
 │   ├── schemas.py       # Pydantic I/O 모델
@@ -156,7 +156,7 @@ graphs/            그래프 조립
 
 ```bash
 /plugin marketplace add jhleee/layered-agent-architecture
-/plugin install langgraph-architect
+/plugin install layered-agent-architect
 ```
 
 ### 사용 예시
@@ -174,9 +174,9 @@ graphs/            그래프 조립
 ### 설치 범위
 
 ```bash
-/plugin install langgraph-architect --scope user      # 모든 프로젝트
-/plugin install langgraph-architect --scope project   # 현재 프로젝트 (팀 공유)
-/plugin install langgraph-architect --scope local     # 로컬만
+/plugin install layered-agent-architect --scope user      # 모든 프로젝트
+/plugin install layered-agent-architect --scope project   # 현재 프로젝트 (팀 공유)
+/plugin install layered-agent-architect --scope local     # 로컬만
 ```
 
 ---

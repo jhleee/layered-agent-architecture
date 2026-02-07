@@ -1,6 +1,6 @@
 {
-  "name": "langgraph-architect",
-  "version": "1.1.0",
+  "name": "layered-agent-architect",
+  "version": "1.2.0",
   "description": "LangGraph 7-layer agent architecture skill — scaffolding, tools, subgraphs, nodes, prompt versioning, and dependency linting for StateGraph projects",
   "author": {
     "name": "jhleee"

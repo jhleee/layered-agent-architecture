@@ -14,7 +14,7 @@
 ## 구조
 
 \`\`\`
-agent_system/
+src/
 ├── core/          # State, Schema, Model Factory
 ├── prompts/       # 프롬프트 템플릿, 동적 빌더
 ├── tools/         # 도구 레지스트리, 개별 도구

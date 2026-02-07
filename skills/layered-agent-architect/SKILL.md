@@ -1,5 +1,5 @@
 ---
-name: langgraph-architect
+name: layered-agent-architect
 description: >
   Use when building or extending LangGraph agent systems with layered
   architecture, creating StateGraph projects, scaffolding 7-layer structures
@@ -38,7 +38,7 @@ description: >
 ### 디렉토리 구조
 
 ```
-agent_system/
+src/
 ├── core/          # State, Schema, Model Factory
 ├── memory/        # Checkpointer, Store
 ├── prompts/       # Templates, Builder

@@ -50,7 +50,7 @@ main.py → interfaces/ → graphs/ → nodes/ → prompts/, tools/, core/
 ### Phase 1 (~8 파일, 최소 시작)
 
 ```
-agent_system/
+src/
 ├── core/
 │   ├── __init__.py
 │   ├── state.py           # AgentState + Reducer
@@ -124,7 +124,7 @@ Phase 2에 추가:
 
 - **1 폴더 = 1 레이어**: `layers/` 같은 래퍼 디렉토리 금지
 - **1 파일 = 1 역할**: 하나의 파일에 여러 관심사 혼합 금지
-- **네스팅 최대 1**: `agent_system/<layer>/<file>.py` 이상 불가
+- **네스팅 최대 1**: `src/<layer>/<file>.py` 이상 불가
 - **`__init__.py`는 내보내기 전용**: 로직 금지 (`tools/__init__.py`의 레지스트리 제외)
 - **서브그래프 1개 = 파일 1개**: `graphs/researcher.py`, `graphs/writer.py`
 - **도구 1개 = 파일 1개**: 관련 도구 2-3개는 같은 파일 허용

@@ -6,7 +6,7 @@ stdlib만 사용 (ast, pathlib, sys, os).
 
 사용법:
     python lint_dependencies.py [project_root]
-    python lint_dependencies.py ./agent_system
+    python lint_dependencies.py ./src
 
 Exit codes:
     0 — 위반 없음 (통과)
@@ -51,7 +51,7 @@ def get_layer(filepath: Path, project_root: Path) -> str | None:
 
     Args:
         filepath: 분석 대상 파일 경로
-        project_root: 프로젝트 루트 (agent_system/)
+        project_root: 프로젝트 루트 (src/)
 
     Returns:
         레이어 이름 (예: "core", "nodes") 또는 None (레이어 외부)
@@ -159,7 +159,7 @@ def check_violations(project_root: str | Path) -> tuple[list[dict], list[dict]]:
     """프로젝트 전체의 의존성 위반을 검출한다.
 
     Args:
-        project_root: agent_system/ 디렉토리 경로
+        project_root: src/ 디렉토리 경로
 
     Returns:
         (violations, warnings) 튜플

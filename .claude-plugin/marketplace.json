@@ -1,14 +1,14 @@
 {
-  "name": "langgraph-architect-marketplace",
+  "name": "layered-agent-architect-marketplace",
   "owner": {
     "name": "jhleee"
   },
   "plugins": [
     {
-      "name": "langgraph-architect",
+      "name": "layered-agent-architect",
       "source": "./",
       "description": "LangGraph 7-layer agent architecture skill — scaffolding, tools, subgraphs, nodes, prompt versioning, and dependency linting for StateGraph projects",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   ]
 }

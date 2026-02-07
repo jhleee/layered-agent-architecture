@@ -10,10 +10,10 @@
 
 ```bash
 # 프로젝트 루트에서 실행
-python path/to/lint_dependencies.py ./agent_system
+python path/to/lint_dependencies.py ./src
 
 # 또는 직접 경로 지정
-python lint_dependencies.py /path/to/agent_system
+python lint_dependencies.py /path/to/src
 ```
 
 스크립트 위치: `scripts/lint_dependencies.py` (이 스킬 디렉토리 내)
@@ -32,7 +32,7 @@ python lint_dependencies.py /path/to/agent_system
 ### 통과 시
 
 ```
-  Linting dependencies in: /path/to/agent_system
+  Linting dependencies in: /path/to/src
 
   All dependency rules passed.
 
@@ -42,7 +42,7 @@ python lint_dependencies.py /path/to/agent_system
 ### 위반 시
 
 ```
-  Linting dependencies in: /path/to/agent_system
+  Linting dependencies in: /path/to/src
 
 ============================================================
   VIOLATIONS: 2 dependency rule(s) broken
