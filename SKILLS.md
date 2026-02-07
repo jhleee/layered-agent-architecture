@@ -403,8 +403,12 @@ def calculator_tool(expression: str) -> str:
         expression: 계산할 수학 표현식 (예: "2 + 3 * 4")
     """
     try:
-        result = eval(expression)  # 프로덕션에서는 안전한 파서 사용
-        return str(result)
+        # Using a safe evaluation library like 'numexpr' is strongly recommended
+        # to prevent code injection vulnerabilities.
+        # For example:
+        # import numexpr
+        # result = numexpr.evaluate(expression)
+        raise NotImplementedError("A safe expression evaluator must be used instead of eval().")
     except Exception as e:
         return f"계산 오류: {e}"
 ```
