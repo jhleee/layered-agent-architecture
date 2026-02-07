@@ -1,0 +1,18 @@
+{
+  "name": "langgraph-architect",
+  "version": "1.0.0",
+  "description": "LangGraph 7-layer agent architecture skill — scaffolding, tools, subgraphs, nodes, prompt versioning, and dependency linting for StateGraph projects",
+  "author": {
+    "name": "jhleee"
+  },
+  "repository": "https://github.com/jhleee/agent_archetecture_whitepaper",
+  "license": "MIT",
+  "keywords": [
+    "langgraph",
+    "agent",
+    "architecture",
+    "stategraph",
+    "multi-agent",
+    "scaffolding"
+  ]
+}

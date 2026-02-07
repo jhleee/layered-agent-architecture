@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.env
+*.key
+credentials.*
+node_modules/
+.vscode/
+.idea/
