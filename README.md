@@ -148,17 +148,42 @@ graphs/            그래프 조립
 
 ---
 
+## Claude Code 플러그인
+
+이 레포지토리는 Claude Code 플러그인으로 배포된다. 설치하면 LangGraph 프로젝트를 스케폴딩하고, 도구/노드/서브그래프를 추가하고, 아키텍처 규칙을 검증하는 스킬을 사용할 수 있다.
+
+### 설치
+
+```bash
+/plugin marketplace add jhleee/layered-agent-architecture
+/plugin install langgraph-architect
+```
+
+### 사용 예시
+
+| 프롬프트 | 동작 |
+|---------|------|
+| "langgraph로 날씨 봇 만들어줘" | Phase 1 프로젝트 스케폴딩 |
+| "weather_tool 추가해줘" | 도구 생성 + 레지스트리 등록 |
+| "리서처 서브그래프 추가" | 부분 State + 팩토리 함수 + 메인 그래프 연결 |
+| "요약 reasoning 노드 추가" | 역할별 노드 템플릿 적용 |
+| "시스템 프롬프트 v2 만들어줘" | 프롬프트 버전 관리 |
+| "의존성 규칙 검사해줘" | AST 기반 import lint |
+| "Phase 1에서 Phase 2로 확장" | 증분 파일 추가 |
+
+### 설치 범위
+
+```bash
+/plugin install langgraph-architect --scope user      # 모든 프로젝트
+/plugin install langgraph-architect --scope project   # 현재 프로젝트 (팀 공유)
+/plugin install langgraph-architect --scope local     # 로컬만
+```
+
+---
+
 ## SKILLS (구현 지침)
 
-아키텍처를 기반으로 실제 코드를 생성하기 위한 SKILLS 지침은 [`SKILLS.md`](./SKILLS.md)에 정의되어 있다.
-
-SKILLS는 이 아키텍처 문서를 참조하여:
-- 전체 프로젝트 스케폴딩
-- 개별 레이어 생성
-- 새 도구/서브그래프 추가
-- Phase별 확장
-
-등의 작업을 수행하는 구체적인 절차와 규칙을 제공한다.
+아키텍처를 기반으로 실제 코드를 생성하기 위한 SKILLS 지침은 [`SKILLS.md`](./SKILLS.md)에 정의되어 있다. 플러그인 설치 후에는 스킬이 자동으로 참조되므로 이 문서를 직접 읽을 필요가 없다.
 
 ---
 
